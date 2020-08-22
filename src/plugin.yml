@@ -1,0 +1,21 @@
+main: fr.peaceandcube.pacessentials.PACEssentials
+name: PACEssentials
+description: A plugin extending Essentials features
+version: 1.0.0
+author: YanisBft
+website: https://github.com/PeaceAndCubeMC/PACEssentials
+api-version: 1.13
+
+depend: [pAcPI, Essentials]
+
+commands:
+  togglemsgsound:
+    description: Allows you to enable or disable message sounds
+    permission: togglemsgsound
+    permission-message: §cYou do not have the permission to use this command.
+    usage: "§eUsage: §r/togglemsgsound"
+
+permissions:
+  togglemsgsound:
+    description: Allows you to enable or disable message sounds
+    default: true
