@@ -1,0 +1,45 @@
+main: fr.peaceandcube.pacutilities.PACUtilities
+name: PACUtilities
+description: A plugin adding miscellaneous features
+version: ${version}
+author: YanisBft
+website: https://github.com/PeaceAndCubeMC/PACUtilities
+api-version: 1.18
+
+depend: [pAcPI, Essentials]
+
+commands:
+  pacutilities:
+    description: Reload the plugin
+    permission: pacutilities.pacutilities
+    permission-message: §cYou do not have the permission to use this command.
+    usage: "§eUsage: §r/pacutilities reload"
+  togglemsgsound:
+    description: Allows you to enable or disable message sounds
+    permission: pacutilities.togglemsgsound
+    permission-message: §cYou do not have the permission to use this command.
+    usage: "§eUsage: §r/togglemsgsound"
+  tickettete:
+    description: Allows you to add or remove tickets tete
+    permission: pacutilities.tickettete
+    permission-message: §cYou do not have the permission to use this command.
+    usage: "§eUsage: §r/tickettete <add|remove> <player> [<amount>]"
+  reglesevent:
+    description: Allows you to read event rules
+    permission: pacutilities.reglesevent
+    permission-message: §cYou do not have the permission to use this command.
+    usage: "§eUsage: §r/reglesevent <event>"
+
+permissions:
+  pacutilities.pacutilities:
+    description: Allows you to use /pacutilities command
+    default: op
+  pacutilities.togglemsgsound:
+    description: Allows you to use /togglemsgsound command
+    default: true
+  pacutilities.tickettete:
+    description: Allows you to use /tickettete command
+    default: op
+  pacutilities.reglesevent:
+    description: Allows you to use /reglesevent command
+    default: true
