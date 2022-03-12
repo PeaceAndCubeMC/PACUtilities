@@ -29,6 +29,11 @@ commands:
     permission: pacutilities.reglesevent
     permission-message: §cYou do not have the permission to use this command.
     usage: "§eUsage: §r/reglesevent <event>"
+  spawndragon:
+    description: Allows you to start a dragon fight
+    permission: pacutilities.spawndragon
+    permission-message: §cYou do not have the permission to use this command.
+    usage: "§eUsage: §r/spawndragon [<minplayercount>] [<radiustocheck>]"
 
 permissions:
   pacutilities.pacutilities:
@@ -43,3 +48,6 @@ permissions:
   pacutilities.reglesevent:
     description: Allows you to use /reglesevent command
     default: true
+  pacutilities.spawndragon:
+    description: Allows you to use /spawndragon command
+    default: op

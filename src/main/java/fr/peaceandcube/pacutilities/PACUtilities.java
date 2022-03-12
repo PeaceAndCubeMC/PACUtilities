@@ -1,9 +1,6 @@
 package fr.peaceandcube.pacutilities;
 
-import fr.peaceandcube.pacutilities.command.PacUtilitiesCommand;
-import fr.peaceandcube.pacutilities.command.ReglesEventCommand;
-import fr.peaceandcube.pacutilities.command.TicketTeteCommand;
-import fr.peaceandcube.pacutilities.command.ToggleMsgSoundCommand;
+import fr.peaceandcube.pacutilities.command.*;
 import fr.peaceandcube.pacutilities.event.PrivateMessageReceived;
 import fr.peaceandcube.pacutilities.file.EventsFile;
 import fr.peaceandcube.pacutilities.file.PlayersFile;
@@ -19,6 +16,7 @@ public class PACUtilities extends JavaPlugin {
 		this.getCommand("togglemsgsound").setExecutor(new ToggleMsgSoundCommand());
 		this.getCommand("tickettete").setExecutor(new TicketTeteCommand());
 		this.getCommand("reglesevent").setExecutor(new ReglesEventCommand());
+		this.getCommand("spawndragon").setExecutor(new SpawnDragonCommand());
 
 		this.getServer().getPluginManager().registerEvents(new PrivateMessageReceived(), this);
 
