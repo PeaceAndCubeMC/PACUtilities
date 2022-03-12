@@ -48,10 +48,10 @@ public class SpawnDragonCommand implements CommandExecutor, TabExecutor {
                     int nearbyPlayers = world.getNearbyPlayers(portalPos, radiustocheck).size();
 
                     if (nearbyPlayers >= minPlayerCount) {
-                        world.spawnEntity(new Location(world, 0, 62, 3).toCenterLocation(), EntityType.ENDER_CRYSTAL);
-                        world.spawnEntity(new Location(world, 0, 62, -3).toCenterLocation(), EntityType.ENDER_CRYSTAL);
-                        world.spawnEntity(new Location(world, 3, 62, 0).toCenterLocation(), EntityType.ENDER_CRYSTAL);
-                        world.spawnEntity(new Location(world, -3, 62, 0).toCenterLocation(), EntityType.ENDER_CRYSTAL);
+                        world.spawnEntity(portalPos.clone().add(0, 1, 3).toCenterLocation(), EntityType.ENDER_CRYSTAL);
+                        world.spawnEntity(portalPos.clone().add(0, 1, -3).toCenterLocation(), EntityType.ENDER_CRYSTAL);
+                        world.spawnEntity(portalPos.clone().add(3, 1, 0).toCenterLocation(), EntityType.ENDER_CRYSTAL);
+                        world.spawnEntity(portalPos.clone().add(-3, 1, 0).toCenterLocation(), EntityType.ENDER_CRYSTAL);
                         dragonBattle.initiateRespawn();
                         Bukkit.getServer().broadcast(DRAGON_SPAWNED);
                     } else {
