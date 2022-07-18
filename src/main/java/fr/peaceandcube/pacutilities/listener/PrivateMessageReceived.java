@@ -1,4 +1,4 @@
-package fr.peaceandcube.pacutilities.event;
+package fr.peaceandcube.pacutilities.listener;
 
 import fr.peaceandcube.pacutilities.PACUtilities;
 import org.bukkit.Bukkit;
