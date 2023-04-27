@@ -1,8 +1,8 @@
 package fr.peaceandcube.pacutilities.command;
 
-import fr.peaceandcube.pacpi.player.PlayerMessages;
-import fr.peaceandcube.pacpi.player.PlayerSuggestionProviders;
 import fr.peaceandcube.pacutilities.event.PlayerFinishDonjonEvent;
+import fr.peaceandcube.pacutilities.util.PlayerMessages;
+import fr.peaceandcube.pacutilities.util.SuggestionProviders;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.format.TextColor;
@@ -56,7 +56,7 @@ public class DispatchEventCommand implements CommandExecutor, TabExecutor {
             if (args.length == 1) {
                 return TYPES.stream().filter(s -> s.startsWith(args[0])).toList();
             } else if (args.length == 2) {
-                return PlayerSuggestionProviders.getOnlinePlayers(args[1]);
+                return SuggestionProviders.getOnlinePlayers(args[1]);
             }
         }
         return List.of();

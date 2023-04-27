@@ -3,8 +3,8 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '7.0.0'
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
+sourceCompatibility = JavaVersion.VERSION_18
+targetCompatibility = JavaVersion.VERSION_18
 
 group = project.pacutilities_group
 archivesBaseName = project.pacutilities_name
@@ -15,8 +15,6 @@ repositories {
     maven { url "https://papermc.io/repo/repository/maven-public/" }
     // Essentials
     maven { url "https://repo.essentialsx.net/releases/" }
-
-    flatDir { dirs 'libs' }
 }
 
 configurations {
@@ -29,8 +27,6 @@ dependencies {
     compileOnly "io.papermc.paper:paper-api:${paper_version}"
 
     compileOnly "net.essentialsx:EssentialsX:${essentials_version}"
-
-    compileOnly name: "pAcPI-${pacpi_version}"
 }
 
 build {
@@ -39,12 +35,11 @@ build {
 
 shadowJar {
     configurations = [project.configurations.include]
-    classifier(null)
 }
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
-    it.options.release = 17
+    it.options.release = 18
 }
 
 processResources {
