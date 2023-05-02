@@ -1,9 +1,9 @@
 package fr.peaceandcube.pacutilities.command;
 
 import fr.peaceandcube.pacutilities.PACUtilities;
+import fr.peaceandcube.pacutilities.util.PlayerMessages;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
-import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -15,8 +15,6 @@ import java.util.List;
 
 public class ReglesEventCommand implements CommandExecutor, TabExecutor {
     private static final String PERM_REGLESEVENT = "pacutilities.reglesevent";
-    private static final TextComponent EVENT_UNKNOWN = Component.text("L'event n'existe pas", TextColor.color(0xFF5555));
-    private static final TextComponent PAGE_UNKNOWN = Component.text("La page n'existe pas", TextColor.color(0xFF5555));
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
@@ -26,12 +24,12 @@ public class ReglesEventCommand implements CommandExecutor, TabExecutor {
                 String page = args.length >= 2 ? args[1] : "1";
 
                 if (!PACUtilities.eventsFile.getEventNames().contains(event)) {
-                    sender.sendMessage(EVENT_UNKNOWN);
+                    sender.sendMessage(PlayerMessages.REGLESEVENT_EVENT_UNKNOWN);
                     return true;
                 }
 
                 if (!PACUtilities.eventsFile.getEventPages(event).contains(page)) {
-                    sender.sendMessage(PAGE_UNKNOWN);
+                    sender.sendMessage(PlayerMessages.REGLESEVENT_PAGE_UNKNOWN);
                     return true;
                 }
 

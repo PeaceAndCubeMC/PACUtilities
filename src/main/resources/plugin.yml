@@ -6,7 +6,7 @@ author: YanisBft
 website: https://github.com/PeaceAndCubeMC/PACUtilities
 api-version: 1.19
 
-depend: [pAcPI, Essentials]
+depend: [Essentials]
 
 commands:
   dispatchevent:
@@ -33,7 +33,7 @@ commands:
     description: Allows you to add or remove tickets tete
     permission: pacutilities.tickettete
     permission-message: §cYou do not have the permission to use this command.
-    usage: "§eUsage: §r/tickettete <add|remove> <player> [<amount>]"
+    usage: "§eUsage: §r/tickettete <add|get|remove> <player> [<amount>]"
   togglemsgsound:
     description: Allows you to enable or disable message sounds
     permission: pacutilities.togglemsgsound
