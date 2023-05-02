@@ -30,10 +30,15 @@ commands:
     permission-message: §cYou do not have the permission to use this command.
     usage: "§eUsage: §r/spawndragon [<minplayercount>] [<radiustocheck>]"
   tickettete:
-    description: Allows you to add or remove tickets tete
+    description: Allows you to add, remove or get tickets tete
     permission: pacutilities.tickettete
     permission-message: §cYou do not have the permission to use this command.
     usage: "§eUsage: §r/tickettete <add|get|remove> <player> [<amount>]"
+  timer:
+    description: Allows you to start, stop and store a timer
+    permission: pacutilities.timer
+    permission-message: §cYou do not have the permission to use this command.
+    usage: "§eUsage: §r/timer <player> <start|stop|store> [<score> [<ifBetter>]]"
   togglemsgsound:
     description: Allows you to enable or disable message sounds
     permission: pacutilities.togglemsgsound
@@ -55,6 +60,9 @@ permissions:
     default: op
   pacutilities.tickettete:
     description: Allows you to use /tickettete command
+    default: op
+  pacutilities.timer:
+    description: Allows you to use /timer command
     default: op
   pacutilities.togglemsgsound:
     description: Allows you to use /togglemsgsound command

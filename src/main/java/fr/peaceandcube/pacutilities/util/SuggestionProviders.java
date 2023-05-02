@@ -18,4 +18,17 @@ public class SuggestionProviders {
 
         return players;
     }
+
+    public static List<String> getScoreboards(String prefix) {
+        Set<Objective> objectives = Bukkit.getScoreboardManager().getMainScoreboard().getObjectives();
+        List<String> scoreboards = new ArrayList<>();
+
+        for (Objective objective : objectives) {
+            if (objective.getName().toLowerCase().startsWith(prefix.toLowerCase())) {
+                scoreboards.add(objective.getName());
+            }
+        }
+
+        return scoreboards;
+    }
 }

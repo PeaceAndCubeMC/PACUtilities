@@ -12,12 +12,13 @@ public class PACUtilities extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
+		this.getCommand("dispatchevent").setExecutor(new DispatchEventCommand());
 		this.getCommand("pacutilities").setExecutor(new PacUtilitiesCommand());
-		this.getCommand("togglemsgsound").setExecutor(new ToggleMsgSoundCommand());
-		this.getCommand("tickettete").setExecutor(new TicketTeteCommand());
 		this.getCommand("reglesevent").setExecutor(new ReglesEventCommand());
 		this.getCommand("spawndragon").setExecutor(new SpawnDragonCommand());
-		this.getCommand("dispatchevent").setExecutor(new DispatchEventCommand());
+		this.getCommand("tickettete").setExecutor(new TicketTeteCommand());
+		this.getCommand("timer").setExecutor(new TimerCommand());
+		this.getCommand("togglemsgsound").setExecutor(new ToggleMsgSoundCommand());
 
 		this.getServer().getPluginManager().registerEvents(new PrivateMessageReceived(), this);
 

@@ -18,4 +18,8 @@ public class PlayerMessages {
     public static TextComponent success(String msg) {
         return Component.text(msg, TextColor.color(0x55FF55));
     }
+
+    public static TextComponent result(String msg) {
+        return Component.text(msg, TextColor.color(0xFFFF55));
+    }
 }
