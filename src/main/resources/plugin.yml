@@ -24,6 +24,11 @@ commands:
     permission: pacutilities.reglesevent
     permission-message: §cYou do not have the permission to use this command.
     usage: "§eUsage: §r/reglesevent <event>"
+  removetags:
+    description: Allows you to remove tags from a player, with filters
+    permission: pacutilities.removetags
+    permission-message: §cYou do not have the permission to use this command.
+    usage: "§eUsage: §r/removetags <player> <all|contains|ends_with|matches|starts_with> [<filter>]"
   spawndragon:
     description: Allows you to start a dragon fight
     permission: pacutilities.spawndragon
@@ -55,6 +60,9 @@ permissions:
   pacutilities.reglesevent:
     description: Allows you to use /reglesevent command
     default: true
+  pacutilities.removetags:
+    description: Allows you to use /removetags command
+    default: op
   pacutilities.spawndragon:
     description: Allows you to use /spawndragon command
     default: op

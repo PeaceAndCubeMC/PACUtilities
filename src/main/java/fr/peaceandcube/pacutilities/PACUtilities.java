@@ -15,6 +15,7 @@ public class PACUtilities extends JavaPlugin {
 		this.getCommand("dispatchevent").setExecutor(new DispatchEventCommand());
 		this.getCommand("pacutilities").setExecutor(new PacUtilitiesCommand());
 		this.getCommand("reglesevent").setExecutor(new ReglesEventCommand());
+		this.getCommand("removetags").setExecutor(new RemoveTagsCommand());
 		this.getCommand("spawndragon").setExecutor(new SpawnDragonCommand());
 		this.getCommand("tickettete").setExecutor(new TicketTeteCommand());
 		this.getCommand("timer").setExecutor(new TimerCommand());

@@ -2,6 +2,7 @@ package fr.peaceandcube.pacutilities.util;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.scoreboard.Objective;
 
 import java.util.*;
 
@@ -17,6 +18,18 @@ public class SuggestionProviders {
         }
 
         return players;
+    }
+
+    public static List<String> getAllTags(String prefix) {
+        List<String> tags = new ArrayList<>();
+
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            tags.addAll(player.getScoreboardTags());
+        }
+
+        tags.removeIf(tag -> !tag.toLowerCase().startsWith(prefix.toLowerCase()));
+
+        return tags;
     }
 
     public static List<String> getScoreboards(String prefix) {
