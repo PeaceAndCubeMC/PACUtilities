@@ -1,6 +1,7 @@
 package fr.peaceandcube.pacutilities;
 
 import fr.peaceandcube.pacutilities.command.*;
+import fr.peaceandcube.pacutilities.listener.ItemFramePlaced;
 import fr.peaceandcube.pacutilities.listener.PrivateMessageReceived;
 import fr.peaceandcube.pacutilities.file.EventsFile;
 import fr.peaceandcube.pacutilities.file.PlayersFile;
@@ -21,6 +22,7 @@ public class PACUtilities extends JavaPlugin {
 		this.getCommand("timer").setExecutor(new TimerCommand());
 		this.getCommand("togglemsgsound").setExecutor(new ToggleMsgSoundCommand());
 
+		this.getServer().getPluginManager().registerEvents(new ItemFramePlaced(), this);
 		this.getServer().getPluginManager().registerEvents(new PrivateMessageReceived(), this);
 
 		playersFile = new PlayersFile("players.yml", this);

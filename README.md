@@ -2,6 +2,7 @@
 A plugin adding various commands and features
 
 ## Features
+- When a player places an item frame or a glow item frame renamed "invisible", the item frame entity gets the `Invisible` tag.
 - Play a sound when receiving a private message. Requires Essentials.
 
 ## Commands
