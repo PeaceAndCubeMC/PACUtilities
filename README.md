@@ -49,7 +49,7 @@ Respawns the ender dragon in the End, as if it was manually done.
 Permission: `pacutilities.spawndragon`
 
 Usage:
-- `/spawndragon [<minplayercount>] [<radiustocheck>]`
+- `/spawndragon <minplayercount> [<radiustocheck>]`
 
 ### /tickettete
 Adds, removes or gets tickets tête of a player.

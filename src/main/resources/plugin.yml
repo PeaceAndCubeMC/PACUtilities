@@ -33,7 +33,7 @@ commands:
     description: Allows you to start a dragon fight
     permission: pacutilities.spawndragon
     permission-message: §cYou do not have the permission to use this command.
-    usage: "§eUsage: §r/spawndragon [<minplayercount>] [<radiustocheck>]"
+    usage: "§eUsage: §r/spawndragon <minplayercount> [<radiustocheck>]"
   tickettete:
     description: Allows you to add, remove or get tickets tete
     permission: pacutilities.tickettete

@@ -40,7 +40,7 @@ public class SpawnDragonCommand implements CommandExecutor, TabExecutor {
             int radiustocheck = args.length >= 2 ? Integer.parseInt(args[1]) : 50;
             World world = Bukkit.getServer().getWorld("world_the_end");
 
-            if (world != null) {
+            if (world != null && args.length >= 1) {
                 DragonBattle dragonBattle = world.getEnderDragonBattle();
 
                 if (dragonBattle != null && dragonBattle.getEndPortalLocation() != null) {
