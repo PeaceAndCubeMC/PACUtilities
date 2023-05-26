@@ -13,7 +13,7 @@ commands:
     description: Allows you to dispatch an event
     permission: pacutilities.dispatchevent
     permission-message: §cYou do not have the permission to use this command.
-    usage: "§eUsage: §r/dispatchevent <type> <player> <name>"
+    usage: "§eUsage: §r/dispatchevent <type> <player> <name> [...]"
   pacutilities:
     description: Reload the plugin
     permission: pacutilities.pacutilities

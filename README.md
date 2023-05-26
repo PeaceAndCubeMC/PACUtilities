@@ -13,7 +13,8 @@ Dispatches a custom event with a given name and player.
 Permission: `pacutilities.dispatchevent`
 
 Usage:
-- `/dispatchevent <type> <player> <name>`
+- `/dispatchevent donjon <player> <name>`
+- `/dispatchevent boutique <player> <gradeName> <months>`
 
 ### /pacutilities
 Reloads the plugin.

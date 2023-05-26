@@ -1,5 +1,6 @@
 package fr.peaceandcube.pacutilities.command;
 
+import fr.peaceandcube.pacutilities.event.PlayerBuyGradeEvent;
 import fr.peaceandcube.pacutilities.event.PlayerFinishDonjonEvent;
 import fr.peaceandcube.pacutilities.util.PlayerMessages;
 import fr.peaceandcube.pacutilities.util.SuggestionProviders;
@@ -19,7 +20,7 @@ import java.util.List;
 
 public class DispatchEventCommand implements CommandExecutor, TabExecutor {
     private static final String PERM_DISPATCHEVENT = "pacutilities.dispatchevent";
-    private static final List<String> TYPES = List.of("donjon");
+    private static final List<String> TYPES = List.of("boutique", "donjon");
     private static final TextComponent TYPE_INVALID = Component.text("Le type est invalide", TextColor.color(0xFF5555));
 
     @Override
@@ -28,7 +29,6 @@ public class DispatchEventCommand implements CommandExecutor, TabExecutor {
             if (args.length >= 3) {
                 String type = args[0];
                 Player player = Bukkit.getPlayer(args[1]);
-                String name = String.join(" ", List.of(args).subList(2, args.length));
 
                 if (!TYPES.contains(type)) {
                     sender.sendMessage(TYPE_INVALID);
@@ -41,7 +41,12 @@ public class DispatchEventCommand implements CommandExecutor, TabExecutor {
                 }
 
                 if (type.equals("donjon")) {
+                    String name = String.join(" ", List.of(args).subList(2, args.length));
                     Bukkit.getServer().getPluginManager().callEvent(new PlayerFinishDonjonEvent(player, name));
+                } else if (type.equals("boutique")) {
+                    String gradeName = args[2];
+                    int months = Integer.parseInt(args[3]);
+                    Bukkit.getServer().getPluginManager().callEvent(new PlayerBuyGradeEvent(player, gradeName, months));
                 }
 
                 return true;
